@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/770fa7eb52.js" crossorigin="anonymous"></script>
+    <title>Document</title>
+    <style>
+       html, body {
+           margin:0;
+           padding: 0;
+           border: 0;
+           
+       }
+       .menu {
+            display: flex;
+            justify-content: flex-end;
+            padding: 0.8em;
+            background: black;
+       }
+       .menu a {
+           display: flex;
+           margin: 0.8em;
+           text-decoration: none;
+           color:white;
+           border:0.1em solid gray;
+           padding: 0.8em;
+           justify-content: center;
+       }
+
+       .menu-mobile {
+           background: black;
+           
+       }
+
+       .menu-mobile a {
+           display: block;
+           color: white;
+           text-decoration: none;
+           padding: 1em;
+       }
+
+       .menu #collapse {
+            display: none;
+            
+       }
+
+       #logo{
+           width: 50%;
+           color: white;
+          
+           
+           
+       }
+
+       #collapse{
+           display: flex;
+       }
+
+       .menu-mobile {
+           display: none;
+       }
+
+       @media(max-width:600px){
+
+           .menu {
+               display: block;
+           }
+
+           .menu #collapse{
+             float: left;
+             display: flex;
+
+             justify-content: initial;
+           }
+           
+           .menu a {
+               display: none;
+           }
+
+           #logo{
+               display: block;
+               color: white;
+               width: 100%;
+           }
+        
+       }
+
+       @media(min-width: 600px){
+           #logo{
+               margin: auto;
+           }
+       }       
+       
+    </style>
+</head>
+<body>
+   
+    <nav class="menu" id="menu" da>
+        <a id="collapse" onclick="mostraMenu()"> <i class="fas fa-bars"></i></a>
+        <h1 id="logo">Douglas Vinicius</h1>
+        <a href=""> Home </a>
+        <a href="">Projetos</a>
+        <a href="">Contato</a>
+        
+    </nav>
+    
+    <nav class="menu-mobile" id="menu-mobile" data-toggle="collapse">
+       
+        <div id='opcao-menu-mobile'>
+            <a href="">Home</a>
+            <a href="">Projetos</a>
+            <a href="">Contato</a>
+            
+        </div>
+        
+    </nav>
+
+
+
+
+
+    
+    <script src="script.js"></script>
+</body>
+</html>
